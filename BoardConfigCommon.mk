@@ -58,9 +58,9 @@ BOARD_KERNEL_PAGESIZE := 4096
 
 # Kernel 
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/official/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/official/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/official/recovery_dtbo.img
 
 # mkbootimg
 BOARD_MKBOOTIMG_ARGS:= \
@@ -85,7 +85,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs
 
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm vendor_dlkm system_ext
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm vendor_dlkm system_ext system_dlkm odm_dlkm
 BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200
 
